@@ -63,6 +63,8 @@ export default {
     nav {
         display: flex;
         justify-content: space-between;
+        height: 3.75rem;
+        align-items: center;
     }
 
     #logo {
@@ -121,7 +123,31 @@ export default {
 
 
     @media (min-width: 700px) {
-        
+        #menu-button,
+        #menu-logo,
+        #menu-overlay {
+            display: none;
+        }
+
+
+        #menu-items {
+            display: flex;
+            position: static;
+            height: 3.75rem;
+            width: auto;
+        }
+
+        ul {
+            display: flex;
+            height: 3.75rem;
+            align-items: center;
+        }
+
+        ul li {
+            margin: 0;
+            margin-left: 1.25rem;
+        }
+
     }
 
 
