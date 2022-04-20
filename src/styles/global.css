@@ -35,3 +35,10 @@ a:hover {
 .container {
     width: 90%;
 }
+
+main {
+    width: 100%;
+    height: calc(100vh - 7.5rem);
+    display: flex;
+    flex-direction: column;
+}
