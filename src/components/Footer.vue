@@ -1,8 +1,9 @@
 <template>
     
     <footer>
-        <a class="socialLink" href="">
-            <img title="" src="" alt="">
+        
+        <a class="socialLink" v-for="(socialLink, index) in socialLinks" :key="index"  :href="socialLink.link" target="_blank">
+            <img :title="socialLink.label" :alt="socialLink.label" :src="socialLink.icon">
         </a>
 
     </footer>
@@ -39,6 +40,22 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.socialLink {
+    border: 2px solid var(--color-text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 0.625rem;
+}
+
+
+.socialLink img {
+    width: 1.25rem;
 }
 
 </style>
