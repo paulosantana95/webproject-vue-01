@@ -1,7 +1,7 @@
 <template>
     <header>
         <nav class="container">
-            <a href="/"><img id="logo" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg" alt="WDEV"></a>
+            <router-link to="/"><img id="logo" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg" alt="WDEV"></router-link>
 
 
             <img v-on:click="openMenu" id="menu-button" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/menu.svg" alt="Abrir o menu">
@@ -12,10 +12,10 @@
             <div id="menu-items" :class="{active:menuActive}">
             <img id="menu-logo" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg" alt="WDEV">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Vídeo</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li v-on:click="closeMenu"><router-link to="/">Home</router-link></li>
+                    <li v-on:click="closeMenu"><router-link to="/videos">Vídeos</router-link></li>
+                    <li v-on:click="closeMenu"><router-link to="/sobre">Sobre</router-link></li>
+                    <li v-on:click="closeMenu"><router-link to="/contato">Contato</router-link></li>
                 </ul>
             
             </div>
